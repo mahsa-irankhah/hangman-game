@@ -54,10 +54,7 @@ h1 {
    font-family: 'Comic Sans MS', sans-serif;
 }
 
-/* 
-This class will grey out the letters as they are used. 
-Just add the class "used".
-*/
+
 #letters div.used {
    background-color: lightgray;
    opacity: 0.5;
@@ -67,14 +64,10 @@ section#image {
    text-align: center;
 }
 
-/* 
-Display the message when the game is over. 
-Hide it at the beginning. 
-*/
+
 section#gameover p {
    text-align: center;
    font-size: 2rem;
    display: none;
 }
 
-/* WEB230 Final Project Winter 2021 */
