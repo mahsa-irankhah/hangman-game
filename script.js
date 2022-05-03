@@ -41,7 +41,8 @@ function setUnderScores() {
 function checkIfWon() {
     if (randomItem === result) {
         document.querySelector("#gameover p").style.display = "block";
-        document.querySelector("#image img").src = "./assets/winner.png"
+        document.querySelector("#image img").src = "./assets/winner.png";
+        setTimeout(() => location.reload(), 3000)
     }
 }
 
@@ -61,8 +62,9 @@ function letterHandler(letter) {
     clicked.indexOf(letter) === -1 ? clicked.push(letter) : null;
     document.getElementById(letter.toUpperCase()).className = "used";
     if (randomItem.indexOf(letter) >= 0) {
-        checkIfWon();
         setUnderScores();
+        checkIfWon();
+        
     } else if (randomItem.indexOf(letter) === -1) {
         mistakes++;
         checkIfLost();
